@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point
- * Desciption : assign a random number to the variable n each time it is executed
+ * Description: https://intranet.alxswe.com/projects/213#:~:text=This%20program%20will-,assign%20a%20random%20number%20to%20the%20variable%20n%20each%20time%20it%20is%20executed,-.%20Complete%20the%20source%20code%20in%20order%20to%20print%20the
  * Return: Always 0 (Success)
  */
 
