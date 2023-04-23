@@ -10,14 +10,11 @@
 
 bool is_palindrome(char *s)
 {
-    // Base case: an empty string or a string of one character is a palindrome
     if (strlen(s) <= 1)
         return true;
     
-    // Compare the first and last characters of the string
     if (s[0] != s[strlen(s) - 1])
         return false;
 
-    // Recursively check the substring without the first and last characters
     return (is_palindrome(&s[1]) && is_palindrome(&s[strlen(s) - 1]));
 }
