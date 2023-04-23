@@ -7,22 +7,35 @@
 int is_palindrome(char *s)
 {
     int len = 0;
-    char *start, *end;
+    char *p;
 
-    while (s[len] != '\0')
-        len++;
+    if (s == NULL)
+        return (0);
 
-    start = s;
-    end = s + len - 1;
-
-    while (end > start)
+    p = s;
+    while (*p != '\0')
     {
-        if (*start != *end)
-            return (0);
-
-        start++;
-        end--;
+        len++;
+        p++;
     }
 
-    return (1);
+    return (check_palindrome(s, len));
+}
+
+/**
+ * check_palindrome - recursive helper function to check if a string is a palindrome
+ * @s: the string to check
+ * @len: the length of the string
+ *
+ * Return: 1 if the string is a palindrome, 0 otherwise
+ */
+int check_palindrome(char *s, int len)
+{
+    if (len <= 1)
+        return (1);
+
+    if (*s != s[len - 1])
+        return (0);
+
+    return (check_palindrome(s + 1, len - 2));
 }
