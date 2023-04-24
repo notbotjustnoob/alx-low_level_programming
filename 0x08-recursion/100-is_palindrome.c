@@ -11,14 +11,14 @@
 
 int is_palindrome(char *s)
 {
+	char *new_s = malloc(strlen(s));
+
 	if (strlen(s) <= 1)
 		return (1);
 	
 	if (s[0] != s[strlen(s) - 1])
 		return (0);
 	
-    printf("%s\n",&s[1]);
-    char *new_s = malloc(strlen(s));
     strncpy(new_s, s, strlen(s)-1);
     new_s[strlen(s)-1] = '\0';
     
