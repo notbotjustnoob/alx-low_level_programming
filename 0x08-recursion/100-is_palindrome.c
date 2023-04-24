@@ -12,24 +12,19 @@
 
 int is_palindrome(char *s)
 {
-	char *new_s = malloc(strlen(s)-1);
-
+	char *new_s = malloc(strlen(s) - 1);
 	if (strlen(s) == 2){
 		if (s[0] == s[1])
 			return (1);
-		
 		else
 			return(0);
-		
-	}
-
+		}
 	if (strlen(s) <= 1)
 		return (1);
 	
 	if (s[0] != s[strlen(s) - 1])
 		return (0);
-	
-	strncpy(new_s, &s[1], strlen(s)-1);
+	strncpy(new_s, &s[1], strlen(s) - 1);
 	new_s[strlen(s)-2] = '\0';
 	return (is_palindrome(new_s));
 }
