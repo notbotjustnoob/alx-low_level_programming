@@ -31,7 +31,5 @@ int is_palindrome(char *s)
 	
 	strncpy(new_s, &s[1], strlen(s)-1);
 	new_s[strlen(s)-2] = '\0';
-	printf("%s\n", &s[1]);
-	printf("%s\n", new_s);
 	return (is_palindrome(new_s));
 }
