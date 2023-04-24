@@ -1,4 +1,6 @@
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * is_palindrome - A recursive function that checks if a string is a palindrome
