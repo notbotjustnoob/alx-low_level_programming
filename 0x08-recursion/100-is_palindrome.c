@@ -9,6 +9,7 @@
  * Return: True if the substring is a palindrome, false otherwise
  */
 
+
 int is_palindrome(char *s)
 {
 	char *new_s = malloc(strlen(s)-1);
