@@ -15,11 +15,13 @@ int is_palindrome(char *s)
 	char *new_s = malloc(strlen(s)-1);
 
 	if (strlen(s) == 2)
-		if (s[0]==s[1])
+		if (s[0]==s[1]){
 			return (1);
-		else
+		}
+		else{
 			return(0);
-
+		}
+		
 	if (strlen(s) <= 1)
 		return (1);
 	
