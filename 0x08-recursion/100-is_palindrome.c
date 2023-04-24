@@ -14,6 +14,11 @@ int is_palindrome(char *s)
 	
 	if (s[0] != s[strlen(s) - 1])
 		return (0);
-
+	
+    printf("%s\n",&s[1]);
+    char *new_s = malloc(strlen(s));
+    strncpy(new_s, s, strlen(s)-1);
+    new_s[strlen(s)-1] = '\0';
+    
 	return (is_palindrome(&s[1]) && is_palindrome(&s[strlen(s) - 1]));
 }
