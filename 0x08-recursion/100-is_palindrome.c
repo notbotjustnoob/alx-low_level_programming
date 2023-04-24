@@ -22,5 +22,5 @@ int is_palindrome(char *s)
     strncpy(new_s, s, strlen(s)-1);
     new_s[strlen(s)-1] = '\0';
     
-	return (is_palindrome(&s[1]) && is_palindrome(&s[strlen(s) - 1]));
+	return (is_palindrome(&s[1]) && is_palindrome(&new_s));
 }
