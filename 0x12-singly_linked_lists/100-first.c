@@ -7,6 +7,6 @@ void __attribute__((constructor)) before_main(void);
  */
 void before_main(void)
 {
-	write(1, "You're beat! and yet, you must allow,\n", 39);
-    write(1, "I bore my house upon my back!\n", 30);
+	fwrite(1, "You're beat! and yet, you must allow,\n", 39);
+    fwrite(1, "I bore my house upon my back!\n", 30);
 }
