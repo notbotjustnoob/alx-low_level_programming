@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 void __attribute__((constructor)) before_main(void);
 
@@ -7,5 +8,6 @@ void __attribute__((constructor)) before_main(void);
  */
 void before_main(void)
 {
-	fprintf(stderr, "You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	write(1, "You're beat! and yet, you must allow,\n", 39);
+	write(1, "I bore my house upon my back!\n", 29);
 }
