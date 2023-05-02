@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * print_listint_safe - prints a linked list, even if it has a loop
- * @head: pointer to head of linked list
- *
- * Return: number of nodes in the list
- */
+* print_listint_safe - prints a linked list, even if it has a loop
+* @head: pointer to head of linked list
+*
+* Return: number of nodes in the list
+*/
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *current, *check;
