@@ -3,31 +3,36 @@
 #include <stdlib.h>
 
 /**
- * print_listint_safe - Prints a listint_t linked list.
- * @head: A pointer to the head of the listint_t list.
+ * print_listint_safe - prints a linked list, even if it has a loop
+ * @head: pointer to head of linked list
  *
- * Return: The number of nodes in the list.
+ * Return: number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *current = head, *loop_start = NULL;
+	const listint_t *current, *check;
 	size_t count = 0;
 
-	while (current)
+	current = head;
+	while (current != NULL)
 	{
 		printf("[%p] %d\n", (void *)current, current->n);
 		count++;
 		current = current->next;
-
-		if (current == loop_start)
+		if (current == head)
+			break;
+		if (current == NULL)
+			return (count);
+		check = head;
+		while (check != current)
 		{
-			fprintf(stderr, "Error: infinite loop detected, exiting\n");
-			exit(98);
+			if (current->next == check)
+			{
+				printf("-> [%p] %d\n", (void *)current->next, current->next->n);
+				exit(98);
+			}
+			check = check->next;
 		}
-
-		if (current && current < loop_start)
-			loop_start = current;
 	}
-
 	return (count);
 }
