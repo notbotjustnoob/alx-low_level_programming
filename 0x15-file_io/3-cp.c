@@ -6,10 +6,10 @@
 #define BUF_SIZE 1024
 
 /**
- * error_exit - Prints an error message and exits the program with a given code.
- * @msg: The error message to print.
- * @code: The exit code.
- */
+* error_exit - Prints an error message and exits the program with a given code.
+* @msg: The error message to print.
+* @code: The exit code.
+*/
 void error_exit(char *msg, int code)
 {
 	dprintf(STDERR_FILENO, "%s\n", msg);
